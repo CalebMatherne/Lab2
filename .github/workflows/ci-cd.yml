@@ -15,7 +15,7 @@ jobs:
       - name: Build step
         run: |
           echo "Build OK - HTML validated"
-          exit 1  # Force fail
+          # exit 1  # Force fail
 
   deploy:
     runs-on: ubuntu-latest
