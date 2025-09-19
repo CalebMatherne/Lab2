@@ -13,7 +13,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build step
-        run: echo "Build OK - HTML validated"
+        run: |
+          echo "Build OK - HTML validated"
+          exit 1  # Force fail
 
   deploy:
     runs-on: ubuntu-latest
@@ -36,4 +38,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: webpage
-          path: NonExistantDirectory/index.html
+          path: index.html
